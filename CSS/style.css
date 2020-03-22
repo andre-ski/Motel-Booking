@@ -1,0 +1,220 @@
+/*Aligns logo center*/
+.logo{
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: helvetica, arial;
+}
+
+/*Colour of main background with some padding*/
+main {
+    background: whitesmoke;
+    color: #444;
+    padding: 1rem;
+}
+
+/*Controls height of article display in grid */
+article {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+/*Colour of footer and centered text*/
+footer {
+    background: #b4b4b4; 
+	text-align: center;
+}
+/*Had to use this to validate Google Map iframe*/
+iframe{
+   border: 0px;
+}
+
+/*Aligns and setc colour of the booking form section in center */
+.formbox{
+	width:50%;
+	margin: auto;
+	background-color:#b4b4b4;
+	border: 5px;
+}
+/*Displays content box used for information content inline and with different colour*/
+.contentbox{
+    width: 900px;
+    padding: 5px;
+	color: #b0aead;
+    border: 5px solid;
+	background-color:#b0aead;
+	display:inline-block;
+	vertical-align:top;
+    margin: auto;
+}
+/*Displays content box used for information content inline and with different colour to the right*/
+.contentright{
+    width: 300px;
+    padding: 5px;
+    border: 5px ;
+	background-color: #b4b4b4;
+    display:inline-block;
+	float:right;
+}
+/*Displays content box used for information content inline and with different colour to the left*/
+.contentleft{
+	float:left;
+	margin: auto;
+    width: 500px;
+    padding: 5px;
+	background-color: #b4b4b4;
+    display:inline-block;
+}
+/*Displays content box center*/
+.contentcenter{
+	margin:auto;
+	width: 70%;
+	
+}
+/*Centers map and reduces width*/
+.map{
+	width:60%;
+	margin-left: auto;
+    margin-right: auto;
+	overflow: auto;
+}
+/*Affects top nav bar and colour*/
+.topnav {
+  overflow: hidden;
+  background-color: #353535;
+  
+}
+/*Affects top nav bar with anchors*/
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 15px; 
+}
+
+/*Affects top nav bar colour when mouse hovers*/
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/*Affects top nav bar when clicked, changes colour to show active*/
+.topnav a.active {
+  background-color: #b4b4b4;
+  color: white;
+}
+/*Affects top nav bar drop down buttons*/
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+/*Affects top nav bar drop down box formats*/
+.dropdown .dropbtn {   
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 30px;
+    background-color: inherit;
+    font-family: inherit; 
+	font-size: 15px; 
+}
+/*Affects top nav bar drop down box contents*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/*Affects top nav bar drop down box anchors*/
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 10px 30px;
+    text-transform: none;
+    display: block;
+    text-align: left;
+}
+/*Affects top nav bar drop down box colour when hovering mouse over*/
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+/*Affects top nav bar drop down box display setting when hovering mouse over*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Font family for site/ slideshow display format/ img settings*/
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/*Color change of buttons when active*/
+.active {
+  background-color: #b4b4b4;;
+}
+
+/*Parts of slideshow CSS obtained from https://www.w3schools.com/howto/howto_js_slideshow.asp also*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+#payment{
+    display:none;
+}
+#showpayment{
+	display;
+}

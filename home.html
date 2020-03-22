@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head section contains the meta specifications and links to style sheets-->
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="CSS/style.css" rel="stylesheet">	
+	<!--Title of page-->
+	<title>Home</title>
+</head>
+<body>
+		<!--Logo that takes user back to home page-->
+		<div class="logo">
+		<a href="home.html">
+		<img src="IMAGES/Logo.png" alt="Logo" width="100">
+		</a>
+		</div>
+<br>
+<!--I used code from this source to help me create a navigation bar https://www.w3schools.com/css/css_navbar.asp-->
+	<div class="topnav">	
+	<a class="active" href="/HTML/home.html">Home</a>
+		<div class="dropdown">
+			<button class="dropbtn">Rooms</button>
+			<!--Drop down links-->
+			<div class="dropdown-content">
+			<a href="HTML/rooms.html#studio_room">Studio Unit</a>
+			<a href="HTML/rooms.html#onebedroom_room">One Bedroom Unit</a>
+			<a href="HTML/rooms.html#twobedroom_room">Two Bedroom Unit</a>
+			</div>
+		</div>
+	<a href="HTML/booking.html">Booking</a>
+	<a href="HTML/about.html">About Us</a>
+		<div class="dropdown">
+				<button class="dropbtn">Things To Do
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<!--Drop down links-->
+				<div class="dropdown-content">
+				<a href="HTML/things.html#zoo">Hamilton Zoo</a>
+				<a href="HTML/things.html#gardens">Hamilton Gardens</a>
+				<a href="HTML/things.html#museum">Waikato Museum</a>
+				<a href="HTML/things.html#rotorua">Lake Rotorua</a>
+				</div>
+		</div>
+	</div>
+<main>
+<article>
+	<br>
+	<!--I used code from this source to create slideshow https://www.w3schools.com/howto/howto_js_slideshow.asp-->
+	<div class="slideshow-container">
+				<!--Image on slideshow-->
+				<div class="mySlides fade">
+				  <div class="numbertext">1 / 3</div>
+				  <!--Image source https://www.freeimages.com/photo/interior-1232559-->
+					<img src="IMAGES/room1.jpg" alt="Room Image" style="width:100%;height:650px">
+				  <div class="text">Studio room</div>
+				</div>
+			<!--Image on slideshow-->
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 3</div>
+			   <!--Image source https://www.freeimages.com/photo/porch-in-autumn-1228078 -->
+				<img src="IMAGES/room2.jpg" alt="Room Image" style="width:100%;height:650px">
+			  <div class="text">One Bedroom Unit</div>
+			</div>
+				<!--Image on slideshow-->
+				<div class="mySlides fade">
+				  <div class="numbertext">3 / 3</div>
+				   <!--Image source https://www.freeimages.com/photo/bedroom-bliss-1531454-->
+					<img src="IMAGES/bed1.jpg" alt="Room Image" style="width:100%;height:650px">
+				  <div class="text">Two Bedroom Unit</div>
+				</div>
+	</div>
+<br>
+	<!--centered dots underneath slideshow-->
+	<div style="text-align:center">
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	</div>
+		<!--Additional content about business-->
+		<div class="contentcenter">
+			<h3>Our Business Services</h3>
+			<p>We are a premium lodging business located in the very heart of Hamilton. Our rooms include three different options, from Studio Units, One Bedroom Units
+			<br> and Two Bedroom Units! As well as this, you may choose to include an optional all you can eat breakfast during your stay with us!<small> ($20 per person per night) </small> </p>
+		<hr>
+		<!--Description on how to reach the lodge, list points-->
+		<h4>How to Reach us</h4>
+			<ul>
+			<li>If travelling from the Hamilton Gardens, please exit from the gardens onto Cobham Dr and then make a right turn down Grey St. Follow Grey St and you will  
+			eventually bump into our big advertisement sign on the left side of the road down Albert St!</li>
+			<li>If you are travelling from Claudelands Park and event center,simply take the first turn off Heaphy Terrace and onto Grey St. Then Follow Grey St and you 
+			will eventually bump into our big advertisement sign on the left side of the road down Albert St.</li>
+			</ul>
+		</div>
+	</article> 
+</main>
+
+	<!--Simple footer at the bottom of page that could be edited to suit specific business-->
+	<footer>      
+		<div class="footer">
+		<p>Fictional Court Motor Lodge </p>
+		</div>
+        <small>© 2018</small>
+    </footer>
+	
+	<!--Link to javascript file that controls the slideshow-->
+	<script src="JS/myscripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head section contains the meta specifications and links to style sheets-->
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../CSS/style.css" rel="stylesheet">	
+	<!--Title of page-->
+	<title>About</title>	
+</head>
+<body>
+	<!--Logo that takes user back to home page-->
+	<div class="logo">
+		<a href="../home.html">
+		<img src="../IMAGES/Logo.png" alt="Logo" width="100">
+		</a>
+	</div>
+	<br>
+	<!--I used code from this source to help me create a navigation bar https://www.w3schools.com/css/css_navbar.asp-->
+	<div class="topnav">
+		<a href="../home.html">Home</a>
+			<div class="dropdown">
+				<button class="dropbtn">Rooms
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<!--Drop down links-->
+				<div class="dropdown-content">
+				<a href="../HTML/rooms.html#studio_room">Studio Unit</a>
+				<a href="../HTML/rooms.html#onebedroom_room">One Bedroom Unit</a>
+				<a href="../HTML/rooms.html#twobedroom_room">Two Bedroom Unit</a>
+				</div>
+			</div>
+		<a href="../HTML/booking.html">Booking</a>
+		<a  class="active"  href="../HTML/about.html#aboutus">About Us</a>
+		<div class="dropdown">
+				<button class="dropbtn">Things To Do
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<!--Drop down links-->
+				<div class="dropdown-content">
+				<a href="../HTML/things.html#zoo">Hamilton Zoo</a>
+				<a href="../HTML/things.html#gardens">Hamilton Gardens</a>
+				<a href="../HTML/things.html#museum">Waikato Museum</a>
+				<a href="../HTML/things.html#rotorua">Lake Rotorua</a>
+				</div>
+		</div>
+	</div>
+<br>
+<main>
+<article>
+	<!--Full address and contact information abouit lodge as well as social media link to facebook-->
+	<div class="contentcenter">
+		<div class="contentleft">
+			<h2> Contact Information </h2>
+			<p>Address: 29 Albert St, Hamilton East, Hamilton 3216</p>
+			<p>Phone: 07-929 4047</p>
+			<p>Email: stay@albertcourt.co.nz</p>
+			<!--Facebook Image Links to facebook page of lodge used as example in this website-->
+			<!--Facebook logo from https://www.techgyd.com/facebook-logo/35193/-->
+			<a href="https://www.facebook.com/Albert-Court-Motor-Lodge-586785734744437/"> 
+			<img src="../IMAGES/facebook.png" alt="Facebook Icon" style="width:42px;height:42px;border:0;">
+			</a>
+		</div>
+			<!--Google map location of lodge used as example in this website-->
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.679646668606!2d175.29248095130703!3d-37.797546740789954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d18caf6e801a9%3A0x2f9e5f45451553ff!2sAlbert+Court+Motor+Lodge!5e0!3m2!1sen!2snz!4v1534296486647" width="800" height="600" style="border:0" allowfullscreen></iframe>
+			</div>
+	<br>
+	</div>
+</article>
+</main>
+<!--Simple footer at the bottom of page that could be edited to suit specific business-->
+<footer>      
+		<div class="footer">
+		<p>Fictional Court Motor Lodge </p>
+		</div>
+        <small>© 2018</small>
+    </footer>
+
+</body> 
+</html>

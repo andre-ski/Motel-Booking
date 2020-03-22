@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head section contains the meta specifications and links to style sheets-->
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../CSS/style.css" rel="stylesheet">	
+	<script src="../JS/booking.js"></script>
+	<!--Title of page-->
+	<title>Booking</title>	
+</head>
+<!--Hides the total and time values on page load-->
+<body onload="hideTotal(); hideTime();">
+	<!--Logo that takes user back to home page-->
+	<div class="logo">
+	<a href="../home.html">
+	<img src="../IMAGES/Logo.png" alt="Logo" width="100">
+	</a>
+	</div>
+
+	<br>
+	<!--I used code from this source to help me create a navigation bar https://www.w3schools.com/css/css_navbar.asp-->
+	<div class="topnav"><a href="../home.html">Home</a>
+		<div class="dropdown">
+			<button class="dropbtn">Rooms
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<!--Drop down links-->
+			<div class="dropdown-content">
+			<a href="../HTML/rooms.html#studio_room">Studio Unit</a>
+			<a href="../HTML/rooms.html#onebedroom_room">One Bedroom Unit</a>
+			<a href="../HTML/rooms.html#twobedroom_room">Two Bedroom Unit</a>
+			</div>
+		</div>
+			<a class="active" href="../HTML/booking.html">Booking</a>
+	<a href="../HTML/about.html">About Us</a>
+	<div class="dropdown">
+			<button class="dropbtn">Things To Do
+				
+			</button>
+			<!--Drop down links-->
+			<div class="dropdown-content">
+			<a href="../HTML/things.html#zoo">Hamilton Zoo</a>
+			<a href="../HTML/things.html#gardens">Hamilton Gardens</a>
+			<a href="../HTML/things.html#museum">Waikato Museum</a>
+			<a href="../HTML/things.html#rotorua">Lake Rotorua</a>
+			</div>
+	</div>
+</div>
+<br>
+<main>
+<article>
+	<div class="formbox">
+		<form id="bookingForm" name="bookingForm" action="../PHP/booking.php" method="post">
+			<div id="bookingOnly">
+			<fieldset>
+			<!--Details of person booking-->
+			<legend>	Your Details</legend>
+					<label for="title"> Title: </label><br>
+					<select id="title" name="title_value" required>
+					<option value="Ms">Ms.</option>
+					<option value="Mr" selected>Mr.</option>
+					<option value="Mrs">Mrs.</option>
+					</select> 
+					<br>
+					<label for="given_name_field">	Given  name:</label><br>
+					<input type="text" id="given_name_field" name="given_name_value" placeholder="John" onblur="validateFName(this)">
+					<!--<label for="middle_names_field">	Middle name:</label><br>-->
+					<!--<input type="text" id="middle_names_field" name="middle_names_value">-->
+					<br>
+					<label for="family_name_field">	Family name:</label><br>
+					<input type="text" id="family_name_field" name="family_name_value" placeholder="Smith" onblur="validateSName(this)" >
+			</fieldset>
+				<fieldset>
+						<!--Contact details of person booking-->
+						<legend> Contact Details </legend>
+						<label for="email"> Email Address: </label><br>
+						<input type="email" id="email" name="email_value" placeholder="email@gmail.com"onblur="validateEmail(this)">
+						<br>
+						<label for="number"> Contact Number: </label><br>
+						<input type="text" id="number" name="number_value" placeholder="027543210" onblur="validateNumber(this)">
+				</fieldset>
+				<fieldset>
+						<!--Postaal address of person booking-->
+						<legend> Postal Address </legend>
+						<label for="text"> Street: </label><br>
+						<input type="text" id="street" name="street" placeholder="120 Lincoln Rd" onblur="validateStreet(this)">						
+						<br>
+						<label for="text"> City: </label><br>
+						<input type="text" id="city" name="city" placeholder="Wellington" onblur="validateCity(this)">
+						<br>
+						<label for="text"> Region: </label><br>
+						<input type="text" id="region" name="region" placeholder="Waikato" onblur="validateRegion(this)">
+						<br>
+						<label for="text"> Country: </label><br>
+						<input type="text" id="country" name="country" placeholder="New Zealand" onblur="validateCountry(this)">
+						<br>
+						<label for="number"> Post-code: </label><br>
+						<input type="number" id="post" name="post" maxlength="4" placeholder="3451" onblur="validatePost(this)">
+				</fieldset>
+			<fieldset>
+			<!--Details on booking ie. how many rooms and people etc-->
+			<legend> Booking Details </legend>
+			<label for="room_type"> Room Type: </label><br>
+			<select id="room_type" name="room_selection" onchange="calculateTotal()">
+					<option value="Studio Unit" selected>Studio Unit.</option>
+					<option value="One Bedroom Unit" >One Bedroom Unit.</option>
+					<option value="Two Bedroom Unit">Two Bedroom Unit.</option>
+			</select> 
+			<br>
+			<label for="number_of_rooms"> No. of Rooms: </label><br>
+			<!--Options for required amount of rooms-->
+			<!--On change the new total is calculated-->
+			<select id="number_of_rooms" name="number_of_rooms" onchange="calculateTotal()">
+					<option value="1" selected>1.</option>
+					<option value="2" >2.</option>
+					<option value="3">3.</option>
+					<option value="4">4.</option>
+					<option value="5">5.</option>
+			</select>
+			<br>
+			<label for="number_of_adults"> No. of Adults: </label><br>
+				<!--Options for required amount of Adults-->
+				<!--On change the new total is calculated-->
+			<select id="number_of_adults" name="number_of_adults" onchange="calculateTotal()">		
+					<option value="1" selected>1.</option>
+					<option value="2" >2.</option>
+					<option value="3">3.</option>
+					<option value="4">4.</option>
+					<option value="5">5.</option>
+					<option value="6">6.</option>
+					<option value="7">7.</option>
+					<option value="8">8.</option>
+					<option value="9">9.</option>
+					<option value="10">10.</option>
+					<option value="11">11.</option>
+					<option value="12" >12.</option>
+					<option value="13">13.</option>
+					<option value="14">14.</option>
+					<option value="15">15.</option>
+					<option value="16">16.</option>
+					<option value="17">17.</option>
+					<option value="18">18.</option>
+					<option value="19">19.</option>
+					<option value="20">20.</option>
+			</select> 
+			<br>
+			<label for="number_of_children"> No. of Children: </label><br>
+			<!--Options for required amount of Children-->
+			<!--On change the new total is calculated-->
+			<select id="number_of_children" name="number_of_children" onchange="calculateTotal()">
+					<option value="0">0.</option>
+					<option value="1" selected>1.</option>
+					<option value="2" >2.</option>
+					<option value="3">3.</option>
+					<option value="4">4.</option>
+					<option value="5">5.</option>
+					<option value="6">6.</option>
+					<option value="7">7.</option>
+					<option value="8">8.</option>
+					<option value="9">9.</option>
+					<option value="10">10.</option>
+			</select> 
+			</fieldset>
+			<fieldset>
+			<!--Note about limits on room capacity-->
+				<p><b>Note</b></p>
+				<ul>
+				<li> Max 2 Adults & 1 Child in Studio Unit  </li>
+				<li>Max 2 Adults & 2 Child in One Bedroom Unit </li>
+				<li>Max 4 Adults & 2 Child in Two Bedroom Unit   </li>
+				</ul>
+				<br>
+				<!--Section where user chooses dates of stay-->
+				<div id="dateSection">
+				<label for="start_date"> Dates of Stay: </label><br>
+				<input type="date" id="start_date" name="start_value" required> to
+				<!--Estimated time of arrival section shows after final date has been selected/changed-->
+				<input type="date" id="end_date" name="end_value" onchange="showTime();calculateTotal()" required>
+				</div>
+				<br>
+				<!--Estimated time of arrival section-->
+				<div id="etaSection">
+				<label for="eta"> Estimated Time of Arrival: </label>
+				<input type="time" id="eta" name="estimated_time">
+				</div>
+				<br>
+				<!--Optional breakfast for $20 per person per night-->
+				<label for="breakfast"> Breakfast ($20 pp): </label><br>
+				<input type="checkbox" id="breakfast" name="breakfast" onchange="calculateTotal()">
+				<br>
+			</fieldset>
+		<fieldset>
+			<legend> Total Cost </legend>
+			<br>
+			<!--Where the total cost is displayed-->
+			<div id="totalCost"></div>
+		</fieldset>
+		<!--Reset button and submit button-->
+		<!--Reset button hides the time, total and email reminder on click-->
+		<input type="reset" value="Refresh Form" onclick="history.go(0)">
+		<!--Submit shows message to show that it works-->
+		<input type="button" id ="confirm" value="Confirm Booking" onclick="checkValid()">
+		</div>
+		<br>
+		<div id="payment">
+		<br>
+		<fieldset class="fieldsets">
+                <legend class="legends">
+                    Payment options
+                </legend>
+				<img src="../IMAGES/visa.png" alt="visa" width="50">
+                <input type="radio" id="visaId" name="cardType" value="Visa">
+				<img src="../IMAGES/mastercard.png" alt="mastercard"  width="50">
+                <input type="radio" id="ccId" name="cardType" value="MasterCard">
+                <br>
+                <br>
+                <div id="cc_number1">
+                <span style="font-size:14px;">Card Number:</span><input id="ccn" type="text" size="16" maxlength="16" name="ccn" onblur="validateCardNum(this)"><br> 
+				<span style="font-size:14px;"> CVV: </span><input id="ccv" type="password" size="3" maxlength="3" name="ccv" onblur="validateCvv(this)"><br> 
+				<span style="font-size:14px;"> Cardholder Name: </span><input id="chn" type="text" size="30" maxlength="30" name="chn" placeholder="andreofsoski" onblur="validateCName(this)"><br> 
+				<br>
+				<br>
+				<input type="button" id="btnsubmit" value="Submit for Processing" onclick="validatePayment()">
+				<input type="button" id="btncancel" value="Cancel and Refresh" onClick="history.go(0)"> 
+                </div>
+        </fieldset>
+		</div>
+		</form>
+	</div>
+<br>
+
+</article>
+</main>
+<!--Simple footer at the bottom of page that could be edited to suit specific business-->
+<footer>      
+		<div class="footer">
+		<p>Fictional Court Motor Lodge </p>
+		</div>
+        <small>© 2018</small>
+    </footer>
+
+</body>
+</html>
+
+
